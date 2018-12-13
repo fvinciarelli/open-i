@@ -1,0 +1,95 @@
+{
+  "name": "Open-I Web Service",
+  "apiVersion": "1.0",
+  "description": "Returns Open-I health topic search results for an input query string.",
+  "baseUri": "http://openi.nlm.nih.gov/retrieve.php",
+  "operations": {
+  	"Query": {
+      		"httpMethod": "GET",
+		"responseModel": "getResponse",
+      		"summary": "Returns Open-I health topic search results for an input query string.",
+      		"parameters": {
+      			"query": {
+				"required": true,
+				"location": "query",
+				"type": "string",
+				"description": "Query Term",
+				"default" : "Hope Proyect"
+        			},
+			"start" : {
+				"required": true,
+				"location": "query",
+				"type": "string",
+				"description": "",
+				"default" : "1",
+				"sentAs" : "m"
+			}, 
+			"end" : {
+				"required": true,
+				"location": "query",
+				"type": "string",
+				"description": "Items count to retrieve",
+				"default" : "20",
+				"sentAs": "n"
+			},
+			"includeVideo" : {
+				"location": "query",
+				"type": "string",
+				"description": "Flag to indicate if video search is included or not",
+				"default" : "0",
+				"sentAs": "vid"
+			},
+			"graphicType" : {
+				"location": "query",
+				"type": "string",
+				"description": "Type of graphic been search",
+				"default" : "",
+				"sentAs": "it"
+			},
+			"rankBy" : {
+				"location": "query",
+				"type": "string",
+				"description": "",
+				"default" : "",
+				"sentAs": "favor"
+			},
+			"db" : {
+				"location": "query",
+				"type": "string",
+				"description": "",
+				"default" : "",
+				"sentAs": "sub"
+			},
+			"coll" : {
+				"location": "query",
+				"type": "string",
+				"description": "",
+				"default" : "",
+				"sentAs": "coll"
+			},
+			"fields" : {
+				"location": "query",
+				"type": "string",
+				"description": "",
+				"default" : "",
+				"sentAs": "fields"
+			},
+			"speciality" : {
+				"location": "query",
+				"type": "string",
+				"description": "",
+				"default" : "",
+				"sentAs": "sp"
+			}
+      		}
+  	}
+  },
+  "models": {
+  	"getResponse": {
+      	  "type": "object",
+      	     "additionalProperties": {
+        		"location": "json"
+      	     }
+           }
+  }
+}
