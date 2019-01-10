@@ -1,1 +1,1 @@
-# open-i
+# Open-i Client for Open-i Biomedical Image Search Engine API (https://openi.nlm.nih.gov/)
