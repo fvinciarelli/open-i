@@ -1,6 +1,6 @@
 {
     "name": "vinciarelli/openi",
-    "description": "OpenI Web Service Guzzle Client",
+    "description": "Open-I Web Service Guzzle Client for Open-i Biomedical Image Search Engine API (https://openi.nlm.nih.gov/)",
     "keywords": ["openi", "vinciarelli", "api", "guzzle"],
     "license": "MIT",
     "type": "library",
